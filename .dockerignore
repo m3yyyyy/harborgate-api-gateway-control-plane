@@ -1,0 +1,10 @@
+.git
+.github
+.env*
+data
+bin
+web/node_modules
+web/dist
+**/*_test.go
+*.md
+LICENSE

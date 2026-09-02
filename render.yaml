@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: harborgate-api-gateway-control-plane
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeployTrigger: checksPass
+    envVars:
+      - key: DATA_PATH
+        value: /app/data/harborgate.db
+      - key: WEB_DIR
+        value: /app/web
+      - key: ADMIN_TOKEN
+        generateValue: true

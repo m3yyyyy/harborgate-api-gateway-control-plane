@@ -1,0 +1,27 @@
+# Go
+/bin/
+/.cache/
+*.exe
+*.test
+coverage.out
+
+# Web
+/web/node_modules/
+/web/dist/
+/web/.npm-cache/
+*.tsbuildinfo
+
+# Runtime state
+/data/*.db
+/data/*.db-*
+
+# Local configuration
+.env
+.env.*
+!.env.example
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
