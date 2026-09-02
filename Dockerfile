@@ -18,7 +18,7 @@ RUN CGO_ENABLED=0 go build -trimpath \
   -ldflags="-s -w -X main.version=${VERSION} -X main.commit=${COMMIT}" \
   -o /out/harborgate ./cmd/harborgate
 
-FROM alpine:3.22
+FROM alpine:3.24
 RUN apk add --no-cache ca-certificates tzdata \
   && addgroup -S harborgate \
   && adduser -S -G harborgate -h /app harborgate \
