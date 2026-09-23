@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.7
-FROM node:24-alpine AS web-build
+FROM node:25-alpine AS web-build
 WORKDIR /src/web
 COPY web/package*.json ./
 RUN npm ci
